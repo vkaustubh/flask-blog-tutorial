@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p> Welcome to my blog! Enjoy.</p>
+
+<h3>Contents</h3>
+<table border="2px">
+  <thead>
+  <tr>
+    <td> Title </td>
+    <td> Link </td>
+  </tr>
+  </thead>
+
+  {% for page in pages %}
+  <tr>
+    <td> {{ page.title }}</td>
+    <td> <a href="{{ page.path }}.html"> Read </a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
